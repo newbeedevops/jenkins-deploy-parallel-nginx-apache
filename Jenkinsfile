@@ -51,7 +51,7 @@ pipeline {
         // One or more steps need to be included within each condition's block.
           echo 'The deployment in Nginx and Apache has worked'
           archiveArtifacts allowEmptyArchive: true, artifacts: 'web/*', followSymlinks: false
-          cleanWs()         
+          //cleanWs()         
        }
        failure {
         // One or more steps need to be included within each condition's block.
