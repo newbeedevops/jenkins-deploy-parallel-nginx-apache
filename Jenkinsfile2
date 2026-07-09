@@ -23,6 +23,7 @@ pipeline {
                 stage('Drop Nginx Container'){
                     steps{
                         echo 'droping the Nginx container...'
+                        sh 'sleep 20'  // To ensure there is delay else Nginx will not be aborted as Nginx had already completed before Apache failure could stop it.
                         sh 'docker rm -f app-web-nginx'
                     }
                 }           
