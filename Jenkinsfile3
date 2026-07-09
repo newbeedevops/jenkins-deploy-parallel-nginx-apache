@@ -1,7 +1,7 @@
 pipeline {
     agent any
     options{
-        parallelAlwaysFailFast()  // This will ensure that if any of the parallel stages fails, the other parallel stages will be aborted.
+        parallelsAlwaysFailFast()  // This will ensure that if any of the parallel stages fails, the other parallel stages will be aborted.
     }
     
     stages {
